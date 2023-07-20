@@ -1,7 +1,8 @@
 <!DOCTYPE html>
+
 <html>
-  <head>
-    <style>
+<head>
+<style>
       body {
         flex-wrap: wrap;
 
@@ -68,7 +69,7 @@
         gap: 20px;
       }
     </style>
-    <style>
+<style>
       body {
         font-family: Arial, sans-serif;
         margin: 0;
@@ -142,8 +143,7 @@
         gap: 20px;
       }
     </style>
-
-    <style>
+<style>
       body {
         font-family: Arial, sans-serif;
         margin: 0;
@@ -215,8 +215,7 @@
         gap: 20px;
       }
     </style>
-
-    <style>
+<style>
       body {
         font-family: Arial, sans-serif;
         margin: 0;
@@ -294,18 +293,94 @@
         margin: 20px 0;
     }
 </style>
-
 </head>
-
 <body>
-    <h1 class="twitter-link">
+<h1 class="twitter-link">
         PokeScriptions
     </h1>
-    <p class="twitter-link">
-        <a href="https://twitter.com/Crypto_Liv" target="_blank">Follow me on Twitter</a>
-    </p>
+<p class="twitter-link">
+<a href="https://twitter.com/Crypto_Liv" target="_blank">Follow me on Twitter</a>
+</p>
+<div id="pokemon-modal" style="display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.4);">
+<span class="close" onclick="document.getElementById('pokemon-modal').style.display = 'none';">x</span><div style="background-color: #fefefe; margin: 15% auto; padding: 20px; border: 1px solid #888; width: 50%; text-align: center; border-radius: 10px;">
+<span id="close-modal" onclick="closeModal()" style="color: #aaaaaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer;">×</span>
+<img alt="pokemon image" id="pokemon-image" src="" style="width: 50%;"/>
+<h2 id="pokemon-name"></h2>
+<p>Generation 1</p>
+<table style="margin: 0 auto;">
+<tr><td style="text-align: right;"><b>Owner:</b></td><td id="pokemon-owner" style="text-align: left;">Owner Name Here...</td></tr>
+</table>
+</div>
+</div>
+<script>
+document.querySelectorAll(".pokemon").forEach((pokemonDiv) => {
+    pokemonDiv.addEventListener("click", async () => {
+        const pokemonName = pokemonDiv.querySelector("p").textContent;
+        const pokemon = pokemonData.find((pokemon) => pokemon.name === pokemonName);
+        const api_url = "https://mainnet-api.ethscriptions.com/api/ethscriptions/exists/" + pokemon.sha256Hash;
+        const response = await fetch(api_url);
+
+        if (response.ok) {
+            const json_data = await response.json();
+            if (json_data.result === true) {
+                const ethscription_data = json_data.ethscription;
+                const current_owner = ethscription_data.current_owner;
+                document.getElementById('pokemonOwner').textContent = "Owner: " + current_owner;
+            } else {
+                document.getElementById('pokemonOwner').textContent = "Pokemon " + pokemon.name + " is not owned.";
+            }
+        } else {
+            console.error(`API request failed with status: ${response.status}`);
+        }
+    });
+});
+</script><script>
+  function closeModal() {
+    document.getElementById('pokemon-modal').style.display = 'none';
+  }
+</script><script>
+// Get the modal
+var modal = document.getElementById('pokemon-modal');
+
+// Get the element that closes the modal
+var span = document.getElementsByClassName('close')[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = 'none';
+}
+</script>
+<script>
+// Define an empty object to store the Pokémon descriptions.
+var pokemonDescriptions = {};
+
+// Define the function that fetches a Pokémon's description.
+function fetchPokemonDescription(name) {
+    fetch('https://pokeapi.co/api/v2/pokemon-species/' + name)
+    .then(response => response.json())
+    .then(data => {
+        // The description is in the 'flavor_text_entries' array.
+        // This code assumes that the English description is the first entry.
+        pokemonDescriptions[name] = data.flavor_text_entries[0].flavor_text;
+    })
+    .catch(error => console.error('Error:', error));
+}
+
+// Fetch the descriptions for all Pokémon.
+// You need to replace 'pokemonNames' with your actual array of Pokémon names.
+pokemonNames.forEach(fetchPokemonDescription);
+
+// Update the click event listener to use the description from pokemonDescriptions.
+document.querySelectorAll('.pokemon').forEach(function(pokemonElement) {
+    pokemonElement.addEventListener('click', function() {
+        var pokemonName = this.getAttribute('data-name');
+        detailsElement.textContent = pokemonDescriptions[pokemonName];
+    });
+});
+</script>
+
 </body>
-    <script>
+<script>
       var pokemonData = [
         {
           name: "bulbasaur",
@@ -1290,25 +1365,34 @@
         pokemonDiv.appendChild(pokemonName);
         document.body.appendChild(pokemonDiv);
 
-        pokemonDiv.addEventListener("click", async () => {
-          const api_url =
-            "https://mainnet-api.ethscriptions.com/api/ethscriptions/exists/" +
-            pokemon.sha256Hash;
-          const response = await fetch(api_url);
+        
+pokemonDiv.addEventListener("click", async () => {
+        const pokemonImgModal = document.getElementById("pokemon-image");
+        pokemonImgModal.src = pokemon.imageUrl;
+        pokemonImgModal.alt = pokemon.name;
+    const api_url = "https://mainnet-api.ethscriptions.com/api/ethscriptions/exists/" + pokemon.sha256Hash;
+    const response = await fetch(api_url);
 
-          if (response.ok) {
-            const json_data = await response.json();
-            if (json_data.result === true) {
-              const ethscription_data = json_data.ethscription;
-              const current_owner = ethscription_data.current_owner;
-              alert(`Pokemon ${pokemon.name} is owned by ${current_owner}`);
-            } else {
-              alert(`Pokemon ${pokemon.name} is not owned.`);
-            }
-          } else {
-            console.error(`API request failed with status: ${response.status}`);
-          }
-        });
+    if (response.ok) {
+        const json_data = await response.json();
+        if (json_data.result === true) {
+            const ethscription_data = json_data.ethscription;
+            const current_owner = ethscription_data.current_owner;
+            // Update the owner information in the modal
+            document.getElementById('pokemon-owner').textContent = current_owner;
+            // Show the modal
+            document.getElementById('pokemon-modal').style.display = 'block';
+        } else {
+            // Update the owner information in the modal
+            document.getElementById('pokemon-owner').textContent = 'Pokemon ' + pokemon.name + ' is not owned.';
+            // Show the modal
+            document.getElementById('pokemon-modal').style.display = 'block';
+        }
+    } else {
+        console.error(`API request failed with status: ${response.status}`);
+    }
+});
+;
 
         return pokemonDiv;
       }
@@ -1345,6 +1429,25 @@
           checkOwnership(pokemon, pokemonDiv);
         });
       }, 120000);
-    </script>
-  </body>
+    
+window.onload = function() {
+    // Get the modal
+    var modal = document.getElementById('pokemon-modal');
+
+    // Get the element that closes the modal
+    var span = document.getElementsByClassName('close')[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = 'none';
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    }
+}
+</script>
 </html>
