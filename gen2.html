@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<style>
+      body {
+        flex-wrap: wrap;
+
+        background-color: #f5f7fa;
+        font-family: "Arial", sans-serif;
+      }
+      h1 {
+        text-align: center;
+        color: #ff3e00;
+        text-transform: uppercase;
+        padding: 20px 0;
+        letter-spacing: 4px;
+      }
+
+      .pokemon {
+        display: inline-block;
+        vertical-align: top;
+        margin: 10px;
+      }
+
+      .pokemon:hover {
+        transform: scale(1.05);
+      }
+      .pokemon img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .pokemon h3 {
+        margin-top: 10px;
+        color: #333333;
+        font-size: 16px;
+      }
+      .dim {
+        opacity: 0.5;
+      }
+
+      #pokemon-container {
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+
+      #title-container {
+      }
+
+      #pokemon-container {
+        flex-wrap: wrap;
+      }
+
+      #pokemon-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 10px;
+        justify-items: center;
+      }
+
+      #pokemon-container {
+        display: grid;
+      }
+
+      .pokemon-row {
+        gap: 20px;
+      }
+    </style>
+<style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #ffcb05;
+        color: #3b4cca;
+
+        flex-direction: column;
+      }
+      h1 {
+        background-color: #3b4cca;
+        color: #ffcb05;
+        padding: 20px 0;
+        margin-bottom: 2em;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        width: 100%;
+        text-align: center;
+      }
+      .pokemon-container {
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-top: 2em;
+        width: 80%;
+      }
+      .pokemon-card {
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        width: 300px;
+        margin-bottom: 2em;
+        padding: 1em;
+        background-color: #fff;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+      }
+      .pokemon-card img {
+        width: 100%;
+        height: auto;
+      }
+      .pokemon-card h2 {
+        text-align: center;
+        color: #333;
+      }
+      .pokemon-card p {
+        text-align: center;
+        color: #777;
+      }
+
+      #pokemon-container {
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+
+      #title-container {
+      }
+
+      #pokemon-container {
+        flex-wrap: wrap;
+      }
+
+      #pokemon-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 10px;
+        justify-items: center;
+      }
+
+      #pokemon-container {
+        display: grid;
+      }
+
+      .pokemon-row {
+        gap: 20px;
+      }
+    </style>
+<style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+
+        flex-direction: column;
+      }
+      h1 {
+        background-color: #3b4cca;
+        color: #ffcb05;
+        padding: 20px 0;
+        margin-bottom: 2em;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        width: 100%;
+        text-align: center;
+      }
+      .pokemon-container {
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-top: 2em;
+      }
+      .pokemon-card {
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        width: 300px;
+        margin-bottom: 2em;
+        padding: 1em;
+        background-color: #fff;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+      }
+      .pokemon-card img {
+        width: 100%;
+        height: auto;
+      }
+      .pokemon-card h2 {
+        text-align: center;
+        color: #333;
+      }
+      .pokemon-card p {
+        text-align: center;
+        color: #777;
+      }
+
+      #pokemon-container {
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+
+      #title-container {
+      }
+
+      #pokemon-container {
+        flex-wrap: wrap;
+      }
+
+      #pokemon-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 10px;
+        justify-items: center;
+      }
+
+      #pokemon-container {
+        display: grid;
+      }
+
+      .pokemon-row {
+        gap: 20px;
+      }
+    </style>
+<style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+
+        flex-direction: column;
+      }
+      h1 {
+        background-color: #3b4cca;
+        color: #ffcb05;
+        padding: 20px 0;
+        margin-bottom: 2em;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        width: 100%;
+        text-align: center;
+      }
+      .pokemon-container {
+        text-align: center;
+        margin-top: 2em;
+        width: 100%;
+      }
+      .pokemon-card {
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        width: 10%;
+        margin: 0.5em;
+        padding: 1em;
+        background-color: #fff;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+      }
+      .pokemon-card img {
+        width: 100%;
+        height: auto;
+      }
+      .pokemon-card h2 {
+        text-align: center;
+        color: #333;
+      }
+      .pokemon-card p {
+        text-align: center;
+        color: #777;
+      }
+
+      #pokemon-container {
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+
+      #title-container {
+      }
+
+      #pokemon-container {
+        flex-wrap: wrap;
+      }
+
+      #pokemon-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 10px;
+        justify-items: center;
+      }
+
+      #pokemon-container {
+        display: grid;
+      }
+
+      .pokemon-row {
+        gap: 20px;
+      }
+      <style>
+    .twitter-link {
+        text-align: center;
+        margin: 20px 0;
+    }
+</style>
+</head>
+<body>
+<h1 class="twitter-link">
+        PokeScriptions
+    </h1><h2 style="text-align: center; color: blue; font-size: 2em; font-weight: bold; text-shadow: 2px 2px #ccc; border: 2px solid blue; padding: 10px; border-radius: 10px; width: fit-content; margin: auto;">Generation 2</h2>
+<p class="twitter-link">
+<a href="https://twitter.com/Crypto_Liv" target="_blank">Follow me on Twitter</a>
+</p>
+<div id="pokemon-modal" style="display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.4);">
+<span class="close" onclick="document.getElementById('pokemon-modal').style.display = 'none';">x</span><div style="background-color: #fefefe; margin: 15% auto; padding: 20px; border: 1px solid #888; width: 50%; text-align: center; border-radius: 10px;">
+<span id="close-modal" onclick="closeModal()" style="color: #aaaaaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer;">×</span>
+<img alt="pokemon image" id="pokemon-image" src="" style="width: 50%;"/>
+<h2 id="pokemon-name"></h2>
+<p>Generation 2</p>
+<table style="margin: 0 auto;">
+<tr><td style="text-align: right;"><b>Owner:</b></td><td id="pokemon-owner" style="text-align: left;">Owner Name Here...</td></tr>
+</table>
+</div>
+</div>
+<script>
+document.querySelectorAll(".pokemon").forEach((pokemonDiv) => {
+    pokemonDiv.addEventListener("click", async () => {
+        const pokemonName = pokemonDiv.querySelector("p").textContent;
+        const pokemon = pokemonData.find((pokemon) => pokemon.name === pokemonName);
+        const api_url = "https://mainnet-api.ethscriptions.com/api/ethscriptions/exists/" + pokemon.sha256Hash;
+        const response = await fetch(api_url);
+
+        if (response.ok) {
+            const json_data = await response.json();
+            if (json_data.result === true) {
+                const ethscription_data = json_data.ethscription;
+                const current_owner = ethscription_data.current_owner;
+                document.getElementById('pokemonOwner').textContent = "Owner: " + current_owner;
+            } else {
+                document.getElementById('pokemonOwner').textContent = "Pokemon " + pokemon.name + " is not owned.";
+            }
+        } else {
+            console.error(`API request failed with status: ${response.status}`);
+        }
+    });
+});
+</script><script>
+  function closeModal() {
+    document.getElementById('pokemon-modal').style.display = 'none';
+  }
+</script><script>
+// Get the modal
+var modal = document.getElementById('pokemon-modal');
+
+// Get the element that closes the modal
+var span = document.getElementsByClassName('close')[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = 'none';
+}
+</script>
+<script>
+// Define an empty object to store the Pokémon descriptions.
+var pokemonDescriptions = {};
+
+// Define the function that fetches a Pokémon's description.
+function fetchPokemonDescription(name) {
+    fetch('https://pokeapi.co/api/v2/pokemon-species/' + name)
+    .then(response => response.json())
+    .then(data => {
+        // The description is in the 'flavor_text_entries' array.
+        // This code assumes that the English description is the first entry.
+        pokemonDescriptions[name] = data.flavor_text_entries[0].flavor_text;
+    })
+    .catch(error => console.error('Error:', error));
+}
+
+// Fetch the descriptions for all Pokémon.
+// You need to replace 'pokemonNames' with your actual array of Pokémon names.
+pokemonNames.forEach(fetchPokemonDescription);
+
+// Update the click event listener to use the description from pokemonDescriptions.
+document.querySelectorAll('.pokemon').forEach(function(pokemonElement) {
+    pokemonElement.addEventListener('click', function() {
+        var pokemonName = this.getAttribute('data-name');
+        detailsElement.textContent = pokemonDescriptions[pokemonName];
+    });
+});
+</script>
+</body>
+<script>
+      var pokemonData = [
+        {
+          name: "chikorita",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/chikorita.png",
+        sha256Hash: "973e0c6dc9b791c0301a3cf2cc72521125fbd74158fa75637e9ebb7e83dd6908"
+    },
+    {
+        name: "bayleef",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/bayleef.png",
+        sha256Hash: "578190dbbf7c7d778e37a0e4243e0ad8e7617f9321e58a3ce7b23b6cada57af7"
+    },
+    {
+        name: "meganium",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/meganium.png",
+        sha256Hash: "76b07a29285f3e72ec87ac8700a120d6c7c88c3670a07e908f2918ec2d98e1b6"
+    },
+    {
+        name: "cyndaquil",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/cyndaquil.png",
+        sha256Hash: "a8158dcce184e076ac55f16a8180b9380d9907f950a4c68fd2559e21b7444b6b"
+    },
+    {
+        name: "quilava",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/quilava.png",
+        sha256Hash: "85c783d04dd4eac9b5751eae3ce048d2679d302c8e03083310baf33be0609401"
+    },
+    {
+        name: "typhlosion",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/typhlosion.png",
+        sha256Hash: "f34ea700b120f073ed38155fce581e516779a5c5bb33b264b91e1a2332e06323"
+    },
+    {
+        name: "totodile",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/totodile.png",
+        sha256Hash: "00746e77e9d7b91da8384fccc904e6d7df7c1870a346f0c2e63973694a0a4bf4"
+    },
+    {
+        name: "croconaw",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/croconaw.png",
+        sha256Hash: "8e27b7e672b66aec816f4905dfc0c9ffab647dcd63256c741fa9f5e74862fafd"
+    },
+    {
+        name: "feraligatr",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/feraligatr.png",
+        sha256Hash: "4bc97412788d3469c232a9857c95273d79aea0ac36b61e23c8ed912f6dc5374e"
+    },
+    {
+        name: "sentret",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/sentret.png",
+        sha256Hash: "35c792a339b598d5c1697ec49e170cde74186532ffb0fc4059ed395880e133bd"
+    },
+    {
+        name: "furret",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/furret.png",
+        sha256Hash: "efce2480d834c5375d8ffa9db3c192ec9ba30fb10eb2aae0188b8334f07a0344"
+    },
+    {
+        name: "hoothoot",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/hoothoot.png",
+        sha256Hash: "7d8449fdac2545365bd1fbd1bbbcdd8afa06eac942aa6b3e414a7815711ec0c4"
+    },
+    {
+        name: "noctowl",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/noctowl.png",
+        sha256Hash: "9daf2314d1280ae5f696be474c5fe147521ca7a7ae2ab99321783f460ffe73f9"
+    },
+    {
+        name: "ledyba",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/ledyba.png",
+        sha256Hash: "fa7fce339abcad388889067af90ffbba57a3114eefdbd8f6fad5e85b1859c265"
+    },
+    {
+        name: "ledian",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/ledian.png",
+        sha256Hash: "0c9931b762aea8bf8626cfab40913560ed6bf1d0183c66219e960830f47a0593"
+    },
+    {
+        name: "spinarak",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/spinarak.png",
+        sha256Hash: "f828781f29b54f5e01812d5f49e19e5f963f858e7f7dda85a1ea2c719f5bbce5"
+    },
+    {
+        name: "ariados",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/ariados.png",
+        sha256Hash: "82f5ebff3cfd4686c8ed4270490e43f466f7e31f0bbeeae3a8dbb71580016106"
+    },
+    {
+        name: "crobat",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/crobat.png",
+        sha256Hash: "33d1b90ecf8b1a5b4fb35f6882690befada0518c3212323f9b6fe15b63f81ebd"
+    },
+    {
+        name: "chinchou",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/chinchou.png",
+        sha256Hash: "9eaea19214205b907032e780d391852a09dcf11432fb0364b4100fa6c4bed5a3"
+    },
+    {
+        name: "lanturn",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/lanturn.png",
+        sha256Hash: "c728183deadac6cb0904fcfcfda46e564bf530dc0742e618dc3eabe81828e6b7"
+    },
+    {
+        name: "pichu",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/pichu.png",
+        sha256Hash: "1024dd4470de4c3a8c1c3b07976f519128798563667ebea04f4f070fc6fbe4f3"
+    },
+    {
+        name: "cleffa",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/cleffa.png",
+        sha256Hash: "9f873281f3ca8eaf0e89dbd1bec9cc32a60d818a6629ef28fd43e687ba2b83da"
+    },
+    {
+        name: "igglybuff",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/igglybuff.png",
+        sha256Hash: "ad5a14562516d087240f622ba43dbfdcdd8eff36b2b0200aeef43a0baf88945f"
+    },
+    {
+        name: "togepi",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/togepi.png",
+        sha256Hash: "0e564f96bece8454f33b30ed2bdde495cf568e070ade04f4f90014baeff81477"
+    },
+    {
+        name: "togetic",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/togetic.png",
+        sha256Hash: "2307c3b263bd2528e6149cd9fd36156acf9ce1d42c1eccfe5efb5ee0af6cf020"
+    },
+    {
+        name: "natu",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/natu.png",
+        sha256Hash: "609e34b3d929db767bba9d12e87770f81ea3d96da793479ac678870db9618906"
+    },
+    {
+        name: "xatu",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/xatu.png",
+        sha256Hash: "d0138c266e063d3241b2b5e4f1281ad0c10aaa0ea12100b67c830558ce790836"
+    },
+    {
+        name: "mareep",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/mareep.png",
+        sha256Hash: "a0844a7cbda3bdb92218fec57e96c82f73c27ebc518f001f3dd98936d6812228"
+    },
+    {
+        name: "flaaffy",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/flaaffy.png",
+        sha256Hash: "13a23f95638d47ff5e5ece5e13a1d829ac6141772aa7aced977a63440352dfcb"
+    },
+    {
+        name: "ampharos",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/ampharos.png",
+        sha256Hash: "7d568a4afb24fa1cc6e2a69ab888eca5507bdbefb13c454ccc030d647e76b630"
+    },
+    {
+        name: "bellossom",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/bellossom.png",
+        sha256Hash: "54cb248f86337e1a92b373a590612a5c34159050f64f03ec3ebf2856944387f2"
+    },
+    {
+        name: "marill",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/marill.png",
+        sha256Hash: "45df1bd71c3fba6bb42c833c7e902e348086e11874b6032ec2cf826ee94f0dd4"
+    },
+    {
+        name: "azumarill",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/azumarill.png",
+        sha256Hash: "30b3d1d1b7221173685777d0d13f5af43eab91b5907c9fc0fea3eb4b89968ec9"
+    },
+    {
+        name: "sudowoodo",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/sudowoodo.png",
+        sha256Hash: "c2e302d0b23b24c905aee8d26f2a72924734f5bd7efc245eb86e56975845686c"
+    },
+    {
+        name: "politoed",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/politoed.png",
+        sha256Hash: "e23f5817726d71340e320232efd3a68321456e33766f674b47bdd785f6151cce"
+    },
+    {
+        name: "hoppip",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/hoppip.png",
+        sha256Hash: "44fcec173b2fb28ca8582af3b6ffb03083ca2a399148235909341b4eed813569"
+    },
+    {
+        name: "skiploom",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/skiploom.png",
+        sha256Hash: "9f2c35ff86ec5eef757013ff2c53e85ec6826764bb543bcb90d1ad8b9825bb5e"
+    },
+    {
+        name: "jumpluff",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/jumpluff.png",
+        sha256Hash: "2dc271cd3622d484383eaccc6e9fd0c94b37b8f8e54a1709a8498d2c3fa8bea9"
+    },
+    {
+        name: "aipom",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/aipom.png",
+        sha256Hash: "580d0c1ae2a1914ae3d4e7c1683c62a13e305095fb027aa0cb29b9b710dd5b6a"
+    },
+    {
+        name: "sunkern",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/sunkern.png",
+        sha256Hash: "b563c434ce77ef953a17d1d726b7d76557e55dc2e9b265db8d6b13955c28089a"
+    },
+    {
+        name: "sunflora",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/sunflora.png",
+        sha256Hash: "60d1a388d8c4f45c884995322d1c43b689d9fe6933e356b0ba11b2840ffe8901"
+    },
+    {
+        name: "yanma",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/yanma.png",
+        sha256Hash: "55c37a795a1cdc6d86c69b9c8a371c617e9dbcd6a9057fe4150127a604a8261c"
+    },
+    {
+        name: "wooper",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/wooper.png",
+        sha256Hash: "d8751c0124bc7955f2588f1c6416b22883583b8f39a8a4acfdb46ab3f68ea832"
+    },
+    {
+        name: "quagsire",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/quagsire.png",
+        sha256Hash: "076b4a20f5ba3bc2f8034b66c339781f78d70af3c967f60d9a3cdd89da81bbdd"
+    },
+    {
+        name: "espeon",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/espeon.png",
+        sha256Hash: "70e4f709eef64cbace06cb61059f74db4186bd248100d15408cba3707d27a983"
+    },
+    {
+        name: "umbreon",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/umbreon.png",
+        sha256Hash: "9b57eb005d7ebad3f048ff6dec84292bc86c6c201dc257a24fa1151aadd0af4d"
+    },
+    {
+        name: "murkrow",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/murkrow.png",
+        sha256Hash: "e3a5bd7928c539bac03853d5cf419478cc30d77d3bc37dcb387d320bf376dfdf"
+    },
+    {
+        name: "slowking",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/slowking.png",
+        sha256Hash: "05d4b0c4a083b038484ad74a2899dfd32cc4a7599934f60fb86d3bb2c189a6d9"
+    },
+    {
+        name: "misdreavus",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/misdreavus.png",
+        sha256Hash: "6e5e8625ba089ed23014228aabb8eed8c3537a6d6effe3124eb096543a777b36"
+    },
+    {
+        name: "unown",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/unown.png",
+        sha256Hash: "cd55e0ba97ef7fbbc3285baf859be84e70694bd2b66b3533ed57d6214a87ac9a"
+    },
+    {
+        name: "wobbuffet",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/wobbuffet.png",
+        sha256Hash: "93aa7ecbc030b9c4fa1779d78163946ab1c6575491e69acd47bbb568bd422e13"
+    },
+    {
+        name: "girafarig",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/girafarig.png",
+        sha256Hash: "227cdd5a07d4995334e028e0a685d3a1c474a4c26924d0477f518f177ad253ec"
+    },
+    {
+        name: "pineco",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/pineco.png",
+        sha256Hash: "2ecd324a842b4023a3729cc4773d5be4cd9d7cb40da7d43ffa5c17209c90c6ad"
+    },
+    {
+        name: "forretress",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/forretress.png",
+        sha256Hash: "55810b721cb7029da87cae47ae527d22a166b9836a10d99c8d88974ffefa6637"
+    },
+    {
+        name: "dunsparce",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/dunsparce.png",
+        sha256Hash: "b720235cdb72537aeb66fcd6ff106b1764aa6372065f414e992cb656ad31d06b"
+    },
+    {
+        name: "gligar",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/gligar.png",
+        sha256Hash: "1c06385de5b017bee18f5589c58196a1f32dd59cefd7fc53f505d1b19c208568"
+    },
+    {
+        name: "steelix",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/steelix.png",
+        sha256Hash: "27600b02a6c895fdb6cfa5ae9b30103f8e41d702ca7fe138be0ab9485fbbc35c"
+    },
+    {
+        name: "snubbull",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/snubbull.png",
+        sha256Hash: "c920737c32becc6eb52e65543d34e833de4210c74fd42d52abde0e1819ca6a3c"
+    },
+    {
+        name: "granbull",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/granbull.png",
+        sha256Hash: "8ec2a767d982dc35f2efe117f9c165ea17d28e0df3b575427288f7c2ea4cc914"
+    },
+    {
+        name: "qwilfish",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/qwilfish.png",
+        sha256Hash: "ca4bff57ada596529c2a2cd78baab9565e48564da69cb1f1236954ebb97f07be"
+    },
+    {
+        name: "scizor",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/scizor.png",
+        sha256Hash: "7fee165854b50d8a52be4ac5b61ec22c92adf3e2c7c5084275519f37b0de9377"
+    },
+    {
+        name: "shuckle",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/shuckle.png",
+        sha256Hash: "569a05f22f83daebeb04d5aa87de2c318782ed467599cc9838fb3b159ca432fd"
+    },
+    {
+        name: "heracross",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/heracross.png",
+        sha256Hash: "232f4e9df058c3761b22fed93a5ca00efe9c787fdccdc38eba32a2b96d198990"
+    },
+    {
+        name: "sneasel",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/sneasel.png",
+        sha256Hash: "b9afc23785d2345603a448c7556d7c9047f79230652295d0a3e8da0032cfdcf6"
+    },
+    {
+        name: "teddiursa",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/teddiursa.png",
+        sha256Hash: "c880c71431e67c52be300413de43b50572141ab99fc9dbc692db0f10968807d1"
+    },
+    {
+        name: "ursaring",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/ursaring.png",
+        sha256Hash: "8f7ecfc37b824dd659275b34f3257db1f67356ec465d55826da63b6929685052"
+    },
+    {
+        name: "slugma",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/slugma.png",
+        sha256Hash: "74f84866e57ef3dd8a023060d66bd45f5c7fa5766b15380485493faebc431257"
+    },
+    {
+        name: "magcargo",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/magcargo.png",
+        sha256Hash: "4da5c88334a49b928a334dd16b4625d965009737fe2c0229c9ea6ef793bb3567"
+    },
+    {
+        name: "swinub",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/swinub.png",
+        sha256Hash: "a77e1059e093434a7ee391e1e5d454ca25abcd7245381da348d03e72aaa3da78"
+    },
+    {
+        name: "piloswine",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/piloswine.png",
+        sha256Hash: "f8bccf6813ddc172a8931be303ea5d302e87a10edfaf03fe307af91c8ff00857"
+    },
+    {
+        name: "corsola",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/corsola.png",
+        sha256Hash: "a77f1f31b3fa4da7042b67cdc2a2185019771bea82014c3d2afa3259b0885f8a"
+    },
+    {
+        name: "remoraid",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/remoraid.png",
+        sha256Hash: "ead0d7e29f56f58e7ffb5b50dc200e6b88c965836fb335d6539037fb89912345"
+    },
+    {
+        name: "octillery",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/octillery.png",
+        sha256Hash: "5a3b7788a562347a176fe44cf56e232e62cc57fc57bab9b96a2ab5f0ee5602a6"
+    },
+    {
+        name: "delibird",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/delibird.png",
+        sha256Hash: "ad5dbddab030e8f189e2ccd8f8056dd5f3ddb1f809c7d7f7faa2ffbcd4401e1e"
+    },
+    {
+        name: "mantine",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/mantine.png",
+        sha256Hash: "3eb67cf0833eb5fa8a57cd92429e6e19b63a3a4bcf1a0a1594bc667bdc3a1bf7"
+    },
+    {
+        name: "skarmory",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/skarmory.png",
+        sha256Hash: "7725c12dd17a8c6c4939f508cf748beb7712ecbf49e48d913fcd30f424e68125"
+    },
+    {
+        name: "houndour",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/houndour.png",
+        sha256Hash: "f124869559400ae1b2f984a5d3e1bb43c516a418ca66c5f3caa00ced0614a1fb"
+    },
+    {
+        name: "houndoom",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/houndoom.png",
+        sha256Hash: "0cb7f9bf630dc604632f911c1888ed89e2adc067ebc7cc65238aa14182ac34fb"
+    },
+    {
+        name: "kingdra",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/kingdra.png",
+        sha256Hash: "b169f912be76b14556f5332a866e590034776d318c4b60a7f7fc924c14356148"
+    },
+    {
+        name: "phanpy",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/phanpy.png",
+        sha256Hash: "282097f9b2d1cba790c550aac8d73c306eb625d94244d5403362bdd7c9213299"
+    },
+    {
+        name: "donphan",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/donphan.png",
+        sha256Hash: "813bc17c291a8cf8e4bd7561ab4457c461b67b30eba936cee4ee18ab9c7a18aa"
+    },
+    {
+        name: "porygon2",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/porygon2.png",
+        sha256Hash: "a9d635666e63c3fdd9745177352a8b910047f6e1fe234a921fef953df720630c"
+    },
+    {
+        name: "stantler",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/stantler.png",
+        sha256Hash: "2e449e17cdf4d1d421f3ec8b62ffc1dcdabbfed06fe88895a61323cf0015a686"
+    },
+    {
+        name: "smeargle",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/smeargle.png",
+        sha256Hash: "a395d4c2aa6ce60f8cf4092d41561f56180c53b0203d9f608714d1103cb44a6a"
+    },
+    {
+        name: "tyrogue",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/tyrogue.png",
+        sha256Hash: "b14ac328d2c26a54a4f81a16e02812699386ad909da06df4c32b62133e6d12ed"
+    },
+    {
+        name: "hitmontop",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/hitmontop.png",
+        sha256Hash: "eef6234877e2ca068d722c3ee4636981d1e9369cce8fba2e5ba008d37b2e3f47"
+    },
+    {
+        name: "smoochum",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/smoochum.png",
+        sha256Hash: "ab35b88d3e59c10e630a555f55e25afdf132be3e0af0e85764b776cbc13db93c"
+    },
+    {
+        name: "elekid",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/elekid.png",
+        sha256Hash: "d4646690cf9cbf0904e9c09228b7a41dbfda2a1ce6ab4ba3e170e73c0b3fd476"
+    },
+    {
+        name: "magby",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/magby.png",
+        sha256Hash: "198bb5e6597ff1571933ecc997d904d34511cb06c22d838538d52c3e5fc419f0"
+    },
+    {
+        name: "miltank",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/miltank.png",
+        sha256Hash: "b7c0500fb318b4fc16a3a0cbb513db875277b40e6df03fced2e4124c598f2d35"
+    },
+    {
+        name: "blissey",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/blissey.png",
+        sha256Hash: "797a2897dd891e2142435baeabc54431eb7d457295eb80b0f9bbaa0bdce02eec"
+    },
+    {
+        name: "raikou",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/raikou.png",
+        sha256Hash: "ce050fd7757f0203b6cfde51b760752368efef5c1ddbdd4e8865f03b8165fced"
+    },
+    {
+        name: "entei",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/entei.png",
+        sha256Hash: "4390080497db89553ccb49dca266ebe02e971d41ec69abdc2d4c283b115a0665"
+    },
+    {
+        name: "suicune",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/suicune.png",
+        sha256Hash: "8642b834fdeae73f203f6a3cd5d5c72054ab4a4621de5bf1388957609691a73f"
+    },
+    {
+        name: "larvitar",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/larvitar.png",
+        sha256Hash: "a51f536e96c1af225914a035cda7c8ae11dded4ad0c0995328388fe45204c659"
+    },
+    {
+        name: "pupitar",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/pupitar.png",
+        sha256Hash: "961d660a981387c690642de9b3082c190aefc738a35738ee9ca28e419b7f520e"
+    },
+    {
+        name: "tyranitar",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/tyranitar.png",
+        sha256Hash: "a0a93a2a3de74f47d765f60de416ebae4e05a4ac1590ac7437a08eee14cbb147"
+    },
+    {
+        name: "lugia",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/lugia.png",
+        sha256Hash: "85ae19cc9b5686c4c334886b3ae0ec476211756cb8153d75b0154a1f609160c3"
+    },
+    {
+        name: "ho-oh",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/ho-oh.png",
+        sha256Hash: "f5a0a1f0e0379909d91f7e34f00912cc933af0d91ed1ea2ea9bbd882559a5e2f"
+    },
+    {
+        name: "celebi",
+        imageUrl: "https://img.pokemondb.net/sprites/home/normal/celebi.png",
+        sha256Hash: "02afa64a521ec435f7837c4cac8e11391235eb16913e5fb717d33b406f3b10a0"
+        }
+      ];
+
+      function createPokemon(pokemon) {
+        const pokemonDiv = document.createElement("div");
+        pokemonDiv.classList.add("pokemon");
+        const pokemonImg = document.createElement("img");
+        pokemonImg.src = pokemon.imageUrl;
+        const pokemonName = document.createElement("p");
+        pokemonName.textContent = pokemon.name;
+        pokemonDiv.appendChild(pokemonImg);
+        pokemonDiv.appendChild(pokemonName);
+        document.body.appendChild(pokemonDiv);
+
+        
+pokemonDiv.addEventListener("click", async () => {
+        const pokemonImgModal = document.getElementById("pokemon-image");
+        pokemonImgModal.src = pokemon.imageUrl;
+        pokemonImgModal.alt = pokemon.name;
+    const api_url = "https://mainnet-api.ethscriptions.com/api/ethscriptions/exists/" + pokemon.sha256Hash;
+    const response = await fetch(api_url);
+
+    if (response.ok) {
+        const json_data = await response.json();
+        if (json_data.result === true) {
+            const ethscription_data = json_data.ethscription;
+            const current_owner = ethscription_data.current_owner;
+            // Update the owner information in the modal
+            document.getElementById('pokemon-owner').textContent = current_owner;
+            // Show the modal
+            document.getElementById('pokemon-modal').style.display = 'block';
+        } else {
+            // Update the owner information in the modal
+            document.getElementById('pokemon-owner').textContent = 'Pokemon ' + pokemon.name + ' is not owned.';
+            // Show the modal
+            document.getElementById('pokemon-modal').style.display = 'block';
+        }
+    } else {
+        console.error(`API request failed with status: ${response.status}`);
+    }
+});
+;
+
+        return pokemonDiv;
+      }
+
+      function checkOwnership(pokemon, pokemonDiv) {
+        const api_url =
+          "https://mainnet-api.ethscriptions.com/api/ethscriptions/exists/" +
+          pokemon.sha256Hash;
+        fetch(api_url)
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.result) {
+              pokemonDiv.classList.remove("dim");
+            } else {
+              pokemonDiv.classList.add("dim");
+            }
+          })
+          .catch((error) =>
+            console.error(`API request failed with error: ${error}`)
+          );
+      }
+
+      pokemonData.forEach((pokemon) => {
+        const pokemonDiv = createPokemon(pokemon);
+        checkOwnership(pokemon, pokemonDiv);
+      });
+
+      setInterval(() => {
+        document
+          .querySelectorAll(".pokemon")
+          .forEach((pokemonDiv) => pokemonDiv.remove());
+        pokemonData.forEach((pokemon) => {
+          const pokemonDiv = createPokemon(pokemon);
+          checkOwnership(pokemon, pokemonDiv);
+        });
+      }, 120000);
+    
+window.onload = function() {
+    // Get the modal
+    var modal = document.getElementById('pokemon-modal');
+
+    // Get the element that closes the modal
+    var span = document.getElementsByClassName('close')[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = 'none';
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    }
+}
+</script>
+</html>
