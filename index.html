@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <html>
@@ -27,11 +26,11 @@
             padding: 20px;
         }
 
-        .gen1-link {
+        .gen-link {
             display: block;
             width: 200px;
             height: 50px;
-            margin: 40px auto;
+            margin: 10px;
             background: #ff3e00;
             padding: 10px;
             text-align: center;
@@ -44,8 +43,14 @@
             transition: background 0.3s ease-in-out;
         }
 
-        .gen1-link:hover {
+        .gen-link:hover {
             background: #ff6c40;
+        }
+
+        .link-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         .process {
@@ -78,10 +83,12 @@
 <body>
 <div class="container">
 <h1>Pokescriptions</h1>
-<a class="gen1-link" href="box.html" target="_blank">Pokescription Box</a>
-<a class="gen1-link" href="gen1.html" target="_blank"> Gen 1 Pokemon</a>
-<a class="gen1-link" href="gen2.html" target="_blank"> Gen 2 Pokemon</a>
-<a class="gen1-link" href="gen3.html" target="_blank"> Gen 3 Pokemon</a>
+<div class="link-container">
+<a class="gen-link" href="box.html" target="_blank">Pokescription Box</a>
+<a class="gen-link" href="gen1.html" target="_blank"> Gen 1 Pokemon</a>
+<a class="gen-link" href="gen2.html" target="_blank"> Gen 2 Pokemon</a>
+<a class="gen-link" href="gen3.html" target="_blank"> Gen 3 Pokemon</a>
+</div>
 <div class="process">
 <p>Follow these steps to catch a Pokemon: Gen 2 domain is silver 第二代域名命名为 silver</p>
 <ol>
