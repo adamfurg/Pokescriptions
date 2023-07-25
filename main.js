@@ -257,7 +257,21 @@ let hashes = [
   "0x815947493428aac822f41ac44385952b5750843e0d38959f82ad098a75420944",
   "0xa4d2a3f2e10eec51d3bbdd9b8c1ec554fb7aad05c2d9b46c8509872e19b452f5",
   "0x104bf9fcb96b11dacc5aabcd018e23cc479483833f8a1fa91d88f818f20d2382",
-  "0x059eccdc4b4d0318e2c14b5ecd6705723026d5df269cb3519287caaf0f561db4"
+  "0x059eccdc4b4d0318e2c14b5ecd6705723026d5df269cb3519287caaf0f561db4",
+  "0x4ed02d64805f263602078b10fbc6914087b024286b21d5fa7f3782a83f54cf47",
+  "0xb1fd13bdf47d19e6e660ac0babceaae359405b04848afdf0ad63ad811b82e377",
+  "0x6e8ce434b87fe207147c73cce46e343880f31eb69d5293142bb72796b7a74a87",
+  "0x8fd00564f609653b99cf8219dcd4919dc635576417f7889d71b9f1ee32610480",
+  "0x0d4aaf7400bbcc074bd920c29927ebd06820958d9c1e0c33989b77e98161bab7",
+  "0x1a8c98e61bd235e82a1da737674af14a5f385967ecc4da50d2a3810df6ceb44b",
+  "0x1bc02743dec503f22ca85c47c639dfc0da311e05b441fbf1557487dc9017b4a1",
+  "0xa171d1bc10c82f7fb6e6b9ef401c423b69828c39c91ef96e255ae9d3feb1c2fc",
+  "0xa3568184ad70838b715efc85cb0fded1549f20fabda3ed504ae4e6e112f7ba21",
+  "0xb8ec73bcd6fb1243c9f71ffa4e3eb7a4c7c71d48418def77affc31d82809bc41",
+  "0xf8ef8c9fd1d8cf6a19dc5d431235538409f98bd786b605c64f03118c3534c5b7",
+  "0x33fd8dd2ba0346cd31499453d8894a0a2ed7d5ff4c50ed8cd0f70493cd2f0976",
+  "0xba25b980f55753a03c49b665df06cf4a49f26b6db93b73d494b5c35088807e5c",
+  "0x0a1121d31c4004c53d296b17ff4265517b4500a23a656187d2183661cc42e872"
 ];
 
 const imageUrls = {
@@ -768,11 +782,39 @@ const imageUrls = {
   "0x815947493428aac822f41ac44385952b5750843e0d38959f82ad098a75420944":
     "https://img.pokemondb.net/sprites/home/normal/grovyle.png",
   "0xa4d2a3f2e10eec51d3bbdd9b8c1ec554fb7aad05c2d9b46c8509872e19b452f5":
-  "https://img.pokemondb.net/sprites/home/normal/sceptile.png",
-    "0x104bf9fcb96b11dacc5aabcd018e23cc479483833f8a1fa91d88f818f20d2382": 
-  "https://img.pokemondb.net/sprites/home/normal/torchic.png",
-    "0x059eccdc4b4d0318e2c14b5ecd6705723026d5df269cb3519287caaf0f561db4": 
-  "https://img.pokemondb.net/sprites/home/normal/combusken.png"
+    "https://img.pokemondb.net/sprites/home/normal/sceptile.png",
+  "0x104bf9fcb96b11dacc5aabcd018e23cc479483833f8a1fa91d88f818f20d2382":
+    "https://img.pokemondb.net/sprites/home/normal/torchic.png",
+  "0x059eccdc4b4d0318e2c14b5ecd6705723026d5df269cb3519287caaf0f561db4":
+    "https://img.pokemondb.net/sprites/home/normal/combusken.png",
+  "0x4ed02d64805f263602078b10fbc6914087b024286b21d5fa7f3782a83f54cf47":
+    "https://img.pokemondb.net/sprites/home/normal/blaziken.png",
+  "0xb1fd13bdf47d19e6e660ac0babceaae359405b04848afdf0ad63ad811b82e377":
+    "https://img.pokemondb.net/sprites/home/normal/mudkip.png",
+  "0x6e8ce434b87fe207147c73cce46e343880f31eb69d5293142bb72796b7a74a87":
+    "https://img.pokemondb.net/sprites/home/normal/marshtomp.png",
+  "0x8fd00564f609653b99cf8219dcd4919dc635576417f7889d71b9f1ee32610480":
+    "https://img.pokemondb.net/sprites/home/normal/swampert.png",
+  "0x0d4aaf7400bbcc074bd920c29927ebd06820958d9c1e0c33989b77e98161bab7":
+    "https://img.pokemondb.net/sprites/home/normal/poochyena.png",
+  "0x1a8c98e61bd235e82a1da737674af14a5f385967ecc4da50d2a3810df6ceb44b":
+    "https://img.pokemondb.net/sprites/home/normal/mightyena.png",
+  "0x1bc02743dec503f22ca85c47c639dfc0da311e05b441fbf1557487dc9017b4a1":
+    "https://img.pokemondb.net/sprites/home/normal/zigzagoon.png",
+  "0xa171d1bc10c82f7fb6e6b9ef401c423b69828c39c91ef96e255ae9d3feb1c2fc":
+    "https://img.pokemondb.net/sprites/home/normal/linoone.png",
+  "0xa3568184ad70838b715efc85cb0fded1549f20fabda3ed504ae4e6e112f7ba21":
+    "https://img.pokemondb.net/sprites/home/normal/wurmple.png",
+  "0xb8ec73bcd6fb1243c9f71ffa4e3eb7a4c7c71d48418def77affc31d82809bc41":
+    "https://img.pokemondb.net/sprites/home/normal/silcoon.png",
+  "0xf8ef8c9fd1d8cf6a19dc5d431235538409f98bd786b605c64f03118c3534c5b7":
+    "https://img.pokemondb.net/sprites/home/normal/beautifly.png",
+  "0x33fd8dd2ba0346cd31499453d8894a0a2ed7d5ff4c50ed8cd0f70493cd2f0976":
+    "https://img.pokemondb.net/sprites/home/normal/cascoon.png",
+  "0xba25b980f55753a03c49b665df06cf4a49f26b6db93b73d494b5c35088807e5c":
+    "https://img.pokemondb.net/sprites/home/normal/dustox.png",
+  "0x0a1121d31c4004c53d296b17ff4265517b4500a23a656187d2183661cc42e872":
+    "https://img.pokemondb.net/sprites/home/normal/lotad.png"
 };
 
 window.addEventListener("load", async () => {
