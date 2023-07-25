@@ -270,8 +270,44 @@ let hashes = [
   "0xb8ec73bcd6fb1243c9f71ffa4e3eb7a4c7c71d48418def77affc31d82809bc41",
   "0xf8ef8c9fd1d8cf6a19dc5d431235538409f98bd786b605c64f03118c3534c5b7",
   "0x33fd8dd2ba0346cd31499453d8894a0a2ed7d5ff4c50ed8cd0f70493cd2f0976",
+  "0x42b1dcf2984d7d6ed8ae9c2e4e078fa7d02ba7bc72918e980564f9a847965ee6",
   "0xba25b980f55753a03c49b665df06cf4a49f26b6db93b73d494b5c35088807e5c",
-  "0x0a1121d31c4004c53d296b17ff4265517b4500a23a656187d2183661cc42e872"
+  "0x0a1121d31c4004c53d296b17ff4265517b4500a23a656187d2183661cc42e872",
+  "0xae02eb919292036e657e826bf48941dfff8fb56065c09d8640c1bc7a4b6abc6d",
+  "0x470aec49fdec7a90e726f4bba585de1e9d686204149f955e7c3350816c3b82c8",
+  "0x6317d9abf3f9e432218d6cfa3c261bafc8b09fbe76ffefda8d67e722922caa9b",
+  "0xfba1636696966f09aad35296e20feb472bb7cf3eb578a5f92db0238821c9e18b",
+  "0x73302493991b5ee3b508f07ab9623bfde6172d9571da9a7939a3a5951eb11c94",
+  "0x5b6797d36e2602f051f2c15f86bc464b4b7eb40804ed385d9150bbfea555156c",
+  "0xb0afcc9f18776a684f7084161e99fdc0875af759a3a75e58b7129c5f85c8a5fd",
+  "0x316325c8aca8718e431e78ba4b92493fc39829ef988cc2cf9232759daf8abe1e",
+  "0x254a90f21353960a5283ceb711a60436249b265bfed21f0adb355860e9179460",
+  "0x690b687fd4bf8cd38218af8f4dd6b8e762fd16e3321a6425220ac5c263d758c3",
+  "0x16cd157200ecbf4b23b56ad8db36208d895c22e44aa542e7af7e73bfe9e0a967",
+  "0xedd1506418b94312e24f226cff124ceefdd5aaa98664d13118e5943c64d6698a",
+  "0xde7fe5d74a99a38e0efe800d6af7961323db3192b4fceb570505d84190863a07",
+  "0xde1015f04b8e8c99e1ba92fa0b8d34dffce243758e9f92debd865c298f8a0580",
+  "0x68230c5822eb5e9064aad8d8d99910d25df9a6f08047ab6513c4edba8fede9ca",
+  "0x963415cf3e2532805dee4ae014bb883b7e808bfa57e173069e2992547b62fba4",
+  "0x6339e60f1ebe61e14875d3e4c3d96fca36e4f9f5b25415a3b24098d4c8ebad21",
+  "0x73b466a52aa1401f3005457ddf78f0d2547fe3da0cd016bbb7288a82524fe109",
+  "0xcfe856c1b0e4b6533d393cafc8d2967f2f1334eebfbc77a268ec06e719b965e5",
+  "0x7464bbe40bce8854ff240a8b3dbc40439085d5bc42850c2e92f833335b1a2bb0",
+  "0xd3fb632b2df5888111413d7117274d24b06bdd75b28a68d0c0b0d9d8380ae2a2",
+  "0xb6a35e2d30cb1d9a854dbe83a93b623e1c32704de7eafb4dc5f190c12f6837e1",
+  "0x990c24ae4f99e8e466048c7455cd6abc474d59434c4067c67d65e4eb42abedc9",
+  "0x6558ecde8386dcdf6a3d2d8dd4220defb9a8b15db9d471386c493edd10404033",
+  "0xdfbcbc9e7ba1e7e6f99aacfbaa5caf55e48f96147d944037fe99c61a8e05f2fa",
+  "0x64906b1edf3c344b531073377465efb71f5cce0d8116c80641e9d24b19582c1d",
+  "0x384e5efc7092d8814a096ff93938db790b0164bd8fcb721f534123e5558a17c6",
+  "0xfa7a8e7ef026601a77ba5164b19ab7ab67308f98dcf029f64e0e0dc7d0819b16",
+  "0x81f510700d06ba1e5ecec2499c3a36e8824b69ef9202f613705beb6a8539a051",
+  "0x2fb6354fc996648bedf7695aa4f42466861a1cf76aab6cf80e33c9e4944f9e39",
+  "0x7e716f9f56ab4df5bed652136d3adb497feeb64fc2f9388dc7d0c000f8164f6b",
+  "0x6909b17c21a0f373e9ddcdd79a14466530c56564df79e5729be3a987fe650c58",
+  "0xefa5301544228b9bf4f3869f44a83fba8793ad11ad02f2ee1fc7183ca467c26d",
+  "0x0eb7d5686c14a5624f9384fa30758d27524d917a87bdf615ffb653fc9ddfe816",
+  "0xf5c9fbd2ce4e6e842b165f0900f69564312919c984e7199367d7d9539e2ac12f"
 ];
 
 const imageUrls = {
@@ -811,10 +847,82 @@ const imageUrls = {
     "https://img.pokemondb.net/sprites/home/normal/beautifly.png",
   "0x33fd8dd2ba0346cd31499453d8894a0a2ed7d5ff4c50ed8cd0f70493cd2f0976":
     "https://img.pokemondb.net/sprites/home/normal/cascoon.png",
-  "0xba25b980f55753a03c49b665df06cf4a49f26b6db93b73d494b5c35088807e5c":
+  "0x42b1dcf2984d7d6ed8ae9c2e4e078fa7d02ba7bc72918e980564f9a847965ee6":
     "https://img.pokemondb.net/sprites/home/normal/dustox.png",
+  "0xba25b980f55753a03c49b665df06cf4a49f26b6db93b73d494b5c35088807e5c":
+    "https://img.pokemondb.net/sprites/home/normal/lotad.png",
   "0x0a1121d31c4004c53d296b17ff4265517b4500a23a656187d2183661cc42e872":
-    "https://img.pokemondb.net/sprites/home/normal/lotad.png"
+    "https://img.pokemondb.net/sprites/home/normal/lombre.png",
+  "0xae02eb919292036e657e826bf48941dfff8fb56065c09d8640c1bc7a4b6abc6d":
+    "https://img.pokemondb.net/sprites/home/normal/ludicolo.png",
+  "0x470aec49fdec7a90e726f4bba585de1e9d686204149f955e7c3350816c3b82c8":
+    "https://img.pokemondb.net/sprites/home/normal/seedot.png",
+  "0x6317d9abf3f9e432218d6cfa3c261bafc8b09fbe76ffefda8d67e722922caa9b":
+    "https://img.pokemondb.net/sprites/home/normal/nuzleaf.png",
+  "0xfba1636696966f09aad35296e20feb472bb7cf3eb578a5f92db0238821c9e18b":
+    "https://img.pokemondb.net/sprites/home/normal/shiftry.png",
+  "0x73302493991b5ee3b508f07ab9623bfde6172d9571da9a7939a3a5951eb11c94":
+    "https://img.pokemondb.net/sprites/home/normal/taillow.png",
+  "0x5b6797d36e2602f051f2c15f86bc464b4b7eb40804ed385d9150bbfea555156c":
+    "https://img.pokemondb.net/sprites/home/normal/swellow.png",
+  "0xb0afcc9f18776a684f7084161e99fdc0875af759a3a75e58b7129c5f85c8a5fd":
+    "https://img.pokemondb.net/sprites/home/normal/wingull.png",
+  "0x316325c8aca8718e431e78ba4b92493fc39829ef988cc2cf9232759daf8abe1e":
+    "https://img.pokemondb.net/sprites/home/normal/pelipper.png",
+  "0x254a90f21353960a5283ceb711a60436249b265bfed21f0adb355860e9179460":
+    "https://img.pokemondb.net/sprites/home/normal/ralts.png",
+  "0x690b687fd4bf8cd38218af8f4dd6b8e762fd16e3321a6425220ac5c263d758c3":
+    "https://img.pokemondb.net/sprites/home/normal/kirlia.png",
+  "0x16cd157200ecbf4b23b56ad8db36208d895c22e44aa542e7af7e73bfe9e0a967":
+    "https://img.pokemondb.net/sprites/home/normal/gardevoir.png",
+  "0xedd1506418b94312e24f226cff124ceefdd5aaa98664d13118e5943c64d6698a":
+    "https://img.pokemondb.net/sprites/home/normal/surskit.png",
+  "0xde7fe5d74a99a38e0efe800d6af7961323db3192b4fceb570505d84190863a07":
+    "https://img.pokemondb.net/sprites/home/normal/masquerain.png",
+  "0xde1015f04b8e8c99e1ba92fa0b8d34dffce243758e9f92debd865c298f8a0580":
+    "https://img.pokemondb.net/sprites/home/normal/shroomish.png",
+  "0x68230c5822eb5e9064aad8d8d99910d25df9a6f08047ab6513c4edba8fede9ca":
+    "https://img.pokemondb.net/sprites/home/normal/breloom.png",
+  "0x963415cf3e2532805dee4ae014bb883b7e808bfa57e173069e2992547b62fba4":
+    "https://img.pokemondb.net/sprites/home/normal/slakoth.png",
+  "0x6339e60f1ebe61e14875d3e4c3d96fca36e4f9f5b25415a3b24098d4c8ebad21":
+    "https://img.pokemondb.net/sprites/home/normal/vigoroth.png",
+  "0x73b466a52aa1401f3005457ddf78f0d2547fe3da0cd016bbb7288a82524fe109":
+    "https://img.pokemondb.net/sprites/home/normal/slaking.png",
+  "0xcfe856c1b0e4b6533d393cafc8d2967f2f1334eebfbc77a268ec06e719b965e5":
+    "https://img.pokemondb.net/sprites/home/normal/nincada.png",
+  "0x7464bbe40bce8854ff240a8b3dbc40439085d5bc42850c2e92f833335b1a2bb0":
+    "https://img.pokemondb.net/sprites/home/normal/ninjask.png",
+  "0xd3fb632b2df5888111413d7117274d24b06bdd75b28a68d0c0b0d9d8380ae2a2":
+    "https://img.pokemondb.net/sprites/home/normal/shedinja.png",
+  "0xb6a35e2d30cb1d9a854dbe83a93b623e1c32704de7eafb4dc5f190c12f6837e1":
+    "https://img.pokemondb.net/sprites/home/normal/whismur.png",
+  "0x990c24ae4f99e8e466048c7455cd6abc474d59434c4067c67d65e4eb42abedc9":
+    "https://img.pokemondb.net/sprites/home/normal/loudred.png",
+  "0x6558ecde8386dcdf6a3d2d8dd4220defb9a8b15db9d471386c493edd10404033":
+    "https://img.pokemondb.net/sprites/home/normal/exploud.png",
+  "0xdfbcbc9e7ba1e7e6f99aacfbaa5caf55e48f96147d944037fe99c61a8e05f2fa":
+    "https://img.pokemondb.net/sprites/home/normal/makuhita.png",
+  "0x64906b1edf3c344b531073377465efb71f5cce0d8116c80641e9d24b19582c1d":
+    "https://img.pokemondb.net/sprites/home/normal/hariyama.png",
+  "0x384e5efc7092d8814a096ff93938db790b0164bd8fcb721f534123e5558a17c6":
+    "https://img.pokemondb.net/sprites/home/normal/azurill.png",
+  "0xfa7a8e7ef026601a77ba5164b19ab7ab67308f98dcf029f64e0e0dc7d0819b16":
+    "https://img.pokemondb.net/sprites/home/normal/nosepass.png",
+  "0x81f510700d06ba1e5ecec2499c3a36e8824b69ef9202f613705beb6a8539a051":
+    "https://img.pokemondb.net/sprites/home/normal/skitty.png",
+  "0x2fb6354fc996648bedf7695aa4f42466861a1cf76aab6cf80e33c9e4944f9e39":
+    "https://img.pokemondb.net/sprites/home/normal/delcatty.png",
+  "0x7e716f9f56ab4df5bed652136d3adb497feeb64fc2f9388dc7d0c000f8164f6b":
+    "https://img.pokemondb.net/sprites/home/normal/sableye.png",
+  "0x6909b17c21a0f373e9ddcdd79a14466530c56564df79e5729be3a987fe650c58":
+    "https://img.pokemondb.net/sprites/home/normal/mawile.png",
+  "0xefa5301544228b9bf4f3869f44a83fba8793ad11ad02f2ee1fc7183ca467c26d":
+    "https://img.pokemondb.net/sprites/home/normal/aron.png",
+  "0x0eb7d5686c14a5624f9384fa30758d27524d917a87bdf615ffb653fc9ddfe816":
+    "https://img.pokemondb.net/sprites/home/normal/lairon.png",
+  "0xf5c9fbd2ce4e6e842b165f0900f69564312919c984e7199367d7d9539e2ac12f":
+    "https://img.pokemondb.net/sprites/home/normal/aggron.png"
 };
 
 window.addEventListener("load", async () => {
