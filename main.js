@@ -925,6 +925,7 @@ const imageUrls = {
     "https://img.pokemondb.net/sprites/home/normal/aggron.png"
 };
 
+
 window.addEventListener("load", async () => {
   if (window.ethereum) {
     window.web3 = new Web3(ethereum);
