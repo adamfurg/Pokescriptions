@@ -762,7 +762,7 @@ const imageUrls = {
     "https://img.pokemondb.net/sprites/home/normal/celebi.png",
   "0xddb4e2c73b0963c622bd3eb5d44f1934292b5b0bda5cf14be91004077bd5e82e": 
     "https://img.pokemondb.net/sprites/home/normal/treecko.png"
-  "0x815947493428aac822f41ac44385952b5750843e0d38959f82ad098a75420944": 
+  
    
 };
 
