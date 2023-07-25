@@ -254,6 +254,8 @@ let hashes = [
   "0xfe820708b9e23fde5cf6d6244c2aa765cb641157dd49d1f3343279d8341bca73",
   "0x052f714924d6d8572bc8db0280a73921dd8a5f6204ff2150ceba4c3245e59bd7",
   "0xddb4e2c73b0963c622bd3eb5d44f1934292b5b0bda5cf14be91004077bd5e82e"
+  "0x815947493428aac822f41ac44385952b5750843e0d38959f82ad098a75420944",
+  "0xa4d2a3f2e10eec51d3bbdd9b8c1ec554fb7aad05c2d9b46c8509872e19b452f5"
 ];
 
 const imageUrls = {
@@ -761,6 +763,10 @@ const imageUrls = {
     "https://img.pokemondb.net/sprites/home/normal/celebi.png",
   "0xddb4e2c73b0963c622bd3eb5d44f1934292b5b0bda5cf14be91004077bd5e82e": 
     "https://img.pokemondb.net/sprites/home/normal/treecko.png"
+  "0x815947493428aac822f41ac44385952b5750843e0d38959f82ad098a75420944": 
+    "https://img.pokemondb.net/sprites/home/normal/grovyle.png",
+  "0xa4d2a3f2e10eec51d3bbdd9b8c1ec554fb7aad05c2d9b46c8509872e19b452f5": 
+    "https://img.pokemondb.net/sprites/home/normal/sceptile.png"
 };
 
 window.addEventListener("load", async () => {
