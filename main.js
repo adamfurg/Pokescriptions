@@ -252,7 +252,8 @@ let hashes = [
   "0x026ead1febdf9abc8a3d0a39fb61b93163a1ef08ad95b587221ff6f50baa8a49",
   "0xd87e351cc99ea8753d63c84e89344d8a217b60dad41cd50ebb31324d4ea97d33",
   "0xfe820708b9e23fde5cf6d6244c2aa765cb641157dd49d1f3343279d8341bca73",
-  "0x052f714924d6d8572bc8db0280a73921dd8a5f6204ff2150ceba4c3245e59bd7"
+  "0x052f714924d6d8572bc8db0280a73921dd8a5f6204ff2150ceba4c3245e59bd7",
+  "0xddb4e2c73b0963c622bd3eb5d44f1934292b5b0bda5cf14be91004077bd5e82e"
 ];
 
 const imageUrls = {
@@ -757,7 +758,9 @@ const imageUrls = {
   "0xd87e351cc99ea8753d63c84e89344d8a217b60dad41cd50ebb31324d4ea97d33":
     "https://img.pokemondb.net/sprites/home/normal/ho-oh.png",
   "0xfe820708b9e23fde5cf6d6244c2aa765cb641157dd49d1f3343279d8341bca73":
-    "https://img.pokemondb.net/sprites/home/normal/celebi.png"
+    "https://img.pokemondb.net/sprites/home/normal/celebi.png",
+  "0xddb4e2c73b0963c622bd3eb5d44f1934292b5b0bda5cf14be91004077bd5e82e": 
+    "https://img.pokemondb.net/sprites/home/normal/treecko.png"
 };
 
 window.addEventListener("load", async () => {
