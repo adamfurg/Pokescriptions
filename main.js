@@ -307,7 +307,45 @@ let hashes = [
   "0x6909b17c21a0f373e9ddcdd79a14466530c56564df79e5729be3a987fe650c58",
   "0xefa5301544228b9bf4f3869f44a83fba8793ad11ad02f2ee1fc7183ca467c26d",
   "0x0eb7d5686c14a5624f9384fa30758d27524d917a87bdf615ffb653fc9ddfe816",
-  "0xf5c9fbd2ce4e6e842b165f0900f69564312919c984e7199367d7d9539e2ac12f"
+  "0xf5c9fbd2ce4e6e842b165f0900f69564312919c984e7199367d7d9539e2ac12f",
+  "0xb4846377b6a75b8200dc82796814d0a757e3695b3e4d89fbc70855d32dec369c",
+  "0xb567b8e2ffc5193e2e34f369e23890c5340e89aa1c5f1aa6d9948f7753530327",
+  "0xadfce6457786945f603f2b5e285dd890252e17502b84fe7b5e0a6906fa0f49e4",
+  "0x34c49c14883d8d7034a19efd5ae41084fdc75e62e136d58144027cabad9566db",
+  "0x12fb057071d97506fc4baf129829f6b7c5a7017017814b58292ac3dd3d52b320",
+  "0x26fb33672b70fb5b7f0b63648afe2e1f0af02eb44d0f2fa945b2bc4182f6a01e",
+  "0x4c840178241ec26210e7ec398ff50c5a8a128302123b40830517ae8bde0e7f5b",
+  "0xfb191e00273730b89e70d908578f2831b295e96d19ea4d518a95b084d68b8f13",
+  "0x1ef1c174784af822ae0b5567c62ac836db9da072c283fe32a854eef99f9088cd",
+  "0x2d0c6f73a34bfd3c219d4e3175d5167f76267bde3463566cea1911778d1b31b5",
+  "0xe857d17f8b0ef62ace0de5557359be0812b3e544dce05ac75bc8f41f6dd45b8b",
+  "0x4e595100d1b3e2faae4f9cd9333447f82b9125b08efbb14d4c4e8e2f33f24189",
+  "0x58263d064119adc8b0138c70da98dfb3ead07fea147dcb3251c70b08aba0a462",
+  "0x581fdaecfcb908e0bc02d720527c746431edbd51fad5453ddcd506a3c14e8512",
+  "0x187c5cce2f90d7e901d0cd487f07df51c3537b6cd1892f944bd8635e69faf94e",
+  "0x46e8070e53def195291d0e548a0be30adf2c9753cfd9a64e3f19b76a82e8b4bb",
+  "0x8753f2efa2c248f911aa0ae714edcb8035f38cc0001a0950fc632e12ed7b0185",
+  "0x83fed8d0666aee408214d6bc4b6ca9097c103bee58df6b9cd93d2f10bad1c0a1",
+  "0xade81615df5162cd79fb8b8250ca62865616df24bef589cade3886686c9ca5f3",
+  "0xd5331e50fc8e5560cd363893d44c6d303d51b05ddf0ce091a2216b25ba3b5083",
+  "0x8786ba8e1cf136a344cead46ec969edb486739ddcadfc2f4c76276ef9876f148",
+  "0x73e9b53ab77618d2b8bbe05b2f3af0c495e5b0e9097cf7da367783720f6fcf3f",
+  "0xee11ba5663a3bb4fae975b5f063ad8acb574203d3778d7e8da547c096f14a61c",
+  "0x6ef89f291b2fe855853ed3e96687d54135f776059852239e6b3857d288525f23",
+  "0xbb9b3283a11f0e8b1c90b0566bad4d846e468c64bf61aeac50a8fa1fbc5f2a33",
+  "0x7e6efa3189f62b2869e6ca63c65e9c19d8c45f75ca6f8793a0215bb3ea747aaf",
+  "0xf523675be83cd6352f3870c9c444a4ac08b408c778a03148030353d85d441178",
+  "0x84e7f4c243938bef70cdf2083fa6b146775348d6c5a6bff49d6e74fa802347e1",
+  "0x17a560ab9589ec0047d4fddb6fda8af22380ac031eee3b3587beb08887af490d",
+  "0x6dee6554ac9224b6489e92418207af29765132c0de8be318e83213350117380d",
+  "0x89e8e7e4cff068d22a1d8a711862730c1d7a63b3c2bf38afbc5b68d80a837a17",
+  "0x025fdd744e09f82cfc0db47585e96266b1745b4dfa642afd9d47ab39a36d3bde",
+  "0x0a7746e8995b21c3d6809cf0934d7c262c4a813648c95451c22d7ab25bbeaeec",
+  "0x101a8d720cfcadeba872b492801004779a3844406c275ef961956fe4c346bbdb",
+  "0x14f33af345229ceae876ba084e59a7dd85ec7e27318ad73c22e4a5dedc61abc4",
+  "0x8ee79993ad57bf8c44ff5adfa411ba29b9ce946999e289c10a65250d650239d7",
+  "0x3936254fbc050193907e87c6f4f04dac666306ad2a375593e62412267aed48d9",
+  "0xd1f1ebc4ebad8ff34880524ecf8e8384ad890aa87407435f4a05bd80b4bb5ed5"
 ];
 
 const imageUrls = {
@@ -922,7 +960,83 @@ const imageUrls = {
   "0x0eb7d5686c14a5624f9384fa30758d27524d917a87bdf615ffb653fc9ddfe816":
     "https://img.pokemondb.net/sprites/home/normal/lairon.png",
   "0xf5c9fbd2ce4e6e842b165f0900f69564312919c984e7199367d7d9539e2ac12f":
-    "https://img.pokemondb.net/sprites/home/normal/aggron.png"
+    "https://img.pokemondb.net/sprites/home/normal/aggron.png",
+  "0xb4846377b6a75b8200dc82796814d0a757e3695b3e4d89fbc70855d32dec369c":
+    "https://img.pokemondb.net/sprites/home/normal/meditite.png",
+  "0xb567b8e2ffc5193e2e34f369e23890c5340e89aa1c5f1aa6d9948f7753530327":
+    "https://img.pokemondb.net/sprites/home/normal/medicham.png",
+  "0xadfce6457786945f603f2b5e285dd890252e17502b84fe7b5e0a6906fa0f49e4":
+    "https://img.pokemondb.net/sprites/home/normal/electrike.png",
+  "0x34c49c14883d8d7034a19efd5ae41084fdc75e62e136d58144027cabad9566db":
+    "https://img.pokemondb.net/sprites/home/normal/manectric.png",
+  "0x12fb057071d97506fc4baf129829f6b7c5a7017017814b58292ac3dd3d52b320":
+    "https://img.pokemondb.net/sprites/home/normal/plusle.png",
+  "0x26fb33672b70fb5b7f0b63648afe2e1f0af02eb44d0f2fa945b2bc4182f6a01e":
+    "https://img.pokemondb.net/sprites/home/normal/minun.png",
+  "0x4c840178241ec26210e7ec398ff50c5a8a128302123b40830517ae8bde0e7f5b":
+    "https://img.pokemondb.net/sprites/home/normal/volbeat.png",
+  "0xfb191e00273730b89e70d908578f2831b295e96d19ea4d518a95b084d68b8f13":
+    "https://img.pokemondb.net/sprites/home/normal/illumise.png",
+  "0x1ef1c174784af822ae0b5567c62ac836db9da072c283fe32a854eef99f9088cd":
+    "https://img.pokemondb.net/sprites/home/normal/roselia.png",
+  "0x2d0c6f73a34bfd3c219d4e3175d5167f76267bde3463566cea1911778d1b31b5":
+    "https://img.pokemondb.net/sprites/home/normal/gulpin.png",
+  "0xe857d17f8b0ef62ace0de5557359be0812b3e544dce05ac75bc8f41f6dd45b8b":
+    "https://img.pokemondb.net/sprites/home/normal/swalot.png",
+  "0x4e595100d1b3e2faae4f9cd9333447f82b9125b08efbb14d4c4e8e2f33f24189":
+    "https://img.pokemondb.net/sprites/home/normal/carvanha.png",
+  "0x58263d064119adc8b0138c70da98dfb3ead07fea147dcb3251c70b08aba0a462":
+    "https://img.pokemondb.net/sprites/home/normal/sharpedo.png",
+  "0x581fdaecfcb908e0bc02d720527c746431edbd51fad5453ddcd506a3c14e8512":
+    "https://img.pokemondb.net/sprites/home/normal/wailmer.png",
+  "0x187c5cce2f90d7e901d0cd487f07df51c3537b6cd1892f944bd8635e69faf94e":
+    "https://img.pokemondb.net/sprites/home/normal/wailord.png",
+  "0x46e8070e53def195291d0e548a0be30adf2c9753cfd9a64e3f19b76a82e8b4bb":
+    "https://img.pokemondb.net/sprites/home/normal/numel.png",
+  "0x8753f2efa2c248f911aa0ae714edcb8035f38cc0001a0950fc632e12ed7b0185":
+    "https://img.pokemondb.net/sprites/home/normal/camerupt.png",
+  "0x83fed8d0666aee408214d6bc4b6ca9097c103bee58df6b9cd93d2f10bad1c0a1":
+    "https://img.pokemondb.net/sprites/home/normal/torkoal.png",
+  "0xade81615df5162cd79fb8b8250ca62865616df24bef589cade3886686c9ca5f3":
+    "https://img.pokemondb.net/sprites/home/normal/spoink.png",
+  "0xd5331e50fc8e5560cd363893d44c6d303d51b05ddf0ce091a2216b25ba3b5083":
+    "https://img.pokemondb.net/sprites/home/normal/grumpig.png",
+  "0x8786ba8e1cf136a344cead46ec969edb486739ddcadfc2f4c76276ef9876f148":
+    "https://img.pokemondb.net/sprites/home/normal/spinda.png",
+  "0x73e9b53ab77618d2b8bbe05b2f3af0c495e5b0e9097cf7da367783720f6fcf3f":
+    "https://img.pokemondb.net/sprites/home/normal/trapinch.png",
+  "0xee11ba5663a3bb4fae975b5f063ad8acb574203d3778d7e8da547c096f14a61c":
+    "https://img.pokemondb.net/sprites/home/normal/vibrava.png",
+  "0x6ef89f291b2fe855853ed3e96687d54135f776059852239e6b3857d288525f23":
+    "https://img.pokemondb.net/sprites/home/normal/flygon.png",
+  "0xbb9b3283a11f0e8b1c90b0566bad4d846e468c64bf61aeac50a8fa1fbc5f2a33":
+    "https://img.pokemondb.net/sprites/home/normal/cacnea.png",
+  "0x7e6efa3189f62b2869e6ca63c65e9c19d8c45f75ca6f8793a0215bb3ea747aaf":
+    "https://img.pokemondb.net/sprites/home/normal/cacturne.png",
+  "0xf523675be83cd6352f3870c9c444a4ac08b408c778a03148030353d85d441178":
+    "https://img.pokemondb.net/sprites/home/normal/swablu.png",
+  "0x84e7f4c243938bef70cdf2083fa6b146775348d6c5a6bff49d6e74fa802347e1":
+    "https://img.pokemondb.net/sprites/home/normal/altaria.png",
+  "0x17a560ab9589ec0047d4fddb6fda8af22380ac031eee3b3587beb08887af490d":
+    "https://img.pokemondb.net/sprites/home/normal/zangoose.png",
+  "0x6dee6554ac9224b6489e92418207af29765132c0de8be318e83213350117380d":
+    "https://img.pokemondb.net/sprites/home/normal/seviper.png",
+  "0x89e8e7e4cff068d22a1d8a711862730c1d7a63b3c2bf38afbc5b68d80a837a17":
+    "https://img.pokemondb.net/sprites/home/normal/lunatone.png",
+  "0x025fdd744e09f82cfc0db47585e96266b1745b4dfa642afd9d47ab39a36d3bde":
+    "https://img.pokemondb.net/sprites/home/normal/solrock.png",
+  "0x0a7746e8995b21c3d6809cf0934d7c262c4a813648c95451c22d7ab25bbeaeec":
+    "https://img.pokemondb.net/sprites/home/normal/barboach.png",
+  "0x101a8d720cfcadeba872b492801004779a3844406c275ef961956fe4c346bbdb":
+    "https://img.pokemondb.net/sprites/home/normal/whiscash.png",
+  "0x14f33af345229ceae876ba084e59a7dd85ec7e27318ad73c22e4a5dedc61abc4":
+    "https://img.pokemondb.net/sprites/home/normal/corphish.png",
+  "0x8ee79993ad57bf8c44ff5adfa411ba29b9ce946999e289c10a65250d650239d7":
+    "https://img.pokemondb.net/sprites/home/normal/crawdaunt.png",
+  "0x3936254fbc050193907e87c6f4f04dac666306ad2a375593e62412267aed48d9":
+    "https://img.pokemondb.net/sprites/home/normal/baltoy.png",
+  "0xd1f1ebc4ebad8ff34880524ecf8e8384ad890aa87407435f4a05bd80b4bb5ed5":
+    "https://img.pokemondb.net/sprites/home/normal/claydol.png"
 };
 
 
